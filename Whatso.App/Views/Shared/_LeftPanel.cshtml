@@ -1,0 +1,24 @@
+<div class="sidebar-wrapper sidebar-theme">
+    <nav id="sidebar">
+        <ul class="list-unstyled menu-categories" id="accordionExample">
+            <li class="menu active">
+                <a data-active=@(ViewContext.RouteData.Values["Action"].ToString() == "Index"
+                                    && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "true" : "false") href="/Home/Index" title="Home" data-filter-tags="Home" class="dropdown-toggle">
+                    <div class="">
+                        <i class="las la-home"></i>
+                        <span data-i18n="nav.Home">Home</span>
+                    </div>
+                </a>
+            </li>
+            <li class="menu active">
+                <a data-active=@(ViewContext.RouteData.Values["Action"].ToString() == "Orders"
+                                  && ViewContext.RouteData.Values["Controller"].ToString() == "Order" ? "true" : "false") href="/Order/Orders" title="My Orders" data-filter-tags="My Orders" class="dropdown-toggle">
+                    <div class="">
+                        <i class="las la-shopping-cart"></i>
+                        <span data-i18n="nav.myorder">My Orders</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

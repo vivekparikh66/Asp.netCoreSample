@@ -1,0 +1,24 @@
+@{
+    //var culture = @Session.Language.Code;
+    var dir = "ltr";
+}
+
+<script src="~/js/libs/jquery-3.6.0.min.js"></script>
+<script src="~/lib/bootstrap/js/popper.min.js"></script>
+<script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/lib/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="~/js/app.js"></script>
+<script>
+    $(document).ready(function () {
+        App.init();
+    });
+</script>
+<script src="~/js/custom.js"></script>
+
+<script src="~/js/forms/forms-validation.js"></script>
+
+<script>
+    // this call is required to remap WebSocket as this is overridden by Pace.js plugin ! :-(
+    Object.defineProperty(WebSocket, 'OPEN', { value: 1 });
+</script>
+<script src="~/_framework/blazor.server.js"></script>

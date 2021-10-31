@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Whatso.Common\Whatso.Common.csproj" />
+    <ProjectReference Include="..\Whatso.Configuration\Whatso.Configuration.csproj" />
+    <ProjectReference Include="..\Whatso.Model\Whatso.Model.csproj" />
+    <ProjectReference Include="..\Whatso.Repository\Whatso.Repository.csproj" />
+    <ProjectReference Include="..\Whatso.Services\Whatso.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Whatso.Common\Whatso.Common.csproj" />
+    <ProjectReference Include="..\Whatso.Model\Whatso.Model.csproj" />
+    <ProjectReference Include="..\Whatso.Repository\Whatso.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

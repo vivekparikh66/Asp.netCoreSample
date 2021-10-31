@@ -1,0 +1,203 @@
+﻿@{
+    ViewData["Title"] = "Sweet Alerts";
+    ViewData["PageName"] = "basicui_sweet_alerts";
+    ViewData["Heading"] = "<i class='subheader-icon las la-chart-area'></i> Basic UI <span class='fw-300'>Sweer Alerts</span>";
+    ViewData["Category1"] = "Basic UI";
+
+}
+@section HeadBlock {
+    <link href="~/lib/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <script src="~/lib/plugins/sweetalerts/promise-polyfill.js"></script>
+    <link href="~/lib/plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/lib/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/basic-ui/custom_sweetalert.css" rel="stylesheet" type="text/css" />
+}
+@section SubheaderBlock {
+
+}
+
+<div class="layout-px-spacing">
+    <div class="layout-top-spacing mb-2">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="container p-0">
+                    <div class="row layout-top-spacing">
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Basic message</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info message">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Success message</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info success">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Dynamic queue Example</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info dynamic-queue">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">A title with a text under</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info title-text">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Step by Step</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info step-by-step">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Custom animation</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info custom-animation">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Message with auto close timer</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info timer">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Message with custom image</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info custom-image">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Alert with HTML</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info html">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Warning with "Confirm" button</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info warning confirm">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col- layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Width, padding,  background</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info  custom-width-padding-background">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Footer</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info footer">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ScriptsBlock {
+    <script src="~/lib/plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="~/js/basicui/sweet_alerts.js"></script>
+}

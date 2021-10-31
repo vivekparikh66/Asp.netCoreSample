@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<checkchromeversion>
+  <chrome>
+    <chromeversion>94</chromeversion>
+    <driverversion>94</driverversion>
+  </chrome>
+</checkchromeversion>

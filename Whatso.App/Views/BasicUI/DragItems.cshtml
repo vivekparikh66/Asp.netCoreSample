@@ -1,0 +1,393 @@
+﻿@{
+    ViewData["Title"] = "Drag Items";
+    ViewData["PageName"] = "basicui_drag_items";
+    ViewData["Heading"] = "<i class='subheader-icon las la-chart-area'></i> Basic UI <span class='fw-300'>Drag Iems</span>";
+    ViewData["Category1"] = "Basic UI";
+
+}
+@section HeadBlock {
+    <link href="~/lib/plugins/dragitems/dragula.css" rel="stylesheet" type="text/css" />
+    <link href="~/lib/plugins/dragitems/example.css" rel="stylesheet" type="text/css" />
+}
+@section SubheaderBlock {
+
+}
+
+<div class="layout-px-spacing">
+    <div class="layout-top-spacing mb-2">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="container p-0">
+                    <div class="row layout-top-spacing">
+                        <div class="col-lg-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Basic Drag Items</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="type-1">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="text-center strong text-primary">Choose Employee</p>
+                                                <div id="left-defaults" class="dragula">
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-2.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Abigail Johnson</h6>
+                                                                    <p class="">Software Developer</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-3.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Benjamin Blake</h6>
+                                                                    <p class="">IT Manager</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-4.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Jasmine Juie</h6>
+                                                                    <p class="">Tech Support</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-5.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Evan Bower</h6>
+                                                                    <p class="">Executive</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-6.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Olivia Chapman</h6>
+                                                                    <p class="">Accountant</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="text-center strong text-primary">Selected Employee</p>
+                                                <div id="right-defaults" class="dragula">
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-7.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">David Bond</h6>
+                                                                    <p class="">UI/UX Developer</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-8.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Wanda Campbell</h6>
+                                                                    <p class="">Hardware Engineer</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-9.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Vanessa Alsop</h6>
+                                                                    <p class="">Backend Developer</p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn btn-primary btn-sm">Profile</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>You can drag any element</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="drag-any">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div id="left-drag-any" class="dragula">
+                                                    <div class="media d-block text-sm-left text-center">
+                                                        <h6>It's a heading</h6>
+                                                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                                                    </div>
+                                                    <p class="p-2">Drag me, I'm just a simple text</p>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <p>Nor again is there anyone who loves or pursues or desires to <a href="#" class="text-primary strong">click on a link</a>, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-4.jpg" class="img-fluid ">
+                                                        <img alt="avatar" src="~/img/profile-2.jpg" class="img-fluid ">
+                                                        <img alt="avatar" src="~/img/profile-6.jpg" class="img-fluid ">
+                                                        <img alt="avatar" src="~/img/profile-8.jpg" class="img-fluid ">
+                                                        <img alt="avatar" src="~/img/profile-10.jpg" class="img-fluid ">
+                                                        <img alt="avatar" src="~/img/profile-12.jpg" class="img-fluid ">
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <input class="form-control" placeholder="It's a text input" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div id="right-drag-any" class="dragula">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Delete User</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class='type-2'>
+                                        <div class='row'>
+                                            <div class="col-md-6">
+                                                <p class="text-center strong text-primary">Select a user</p>
+                                                <div id='left-rm-spill' class='dragula'>
+                                                    <div class="media d-block d-sm-flex text-sm-left text-center">
+                                                        <img class="" src="~/img/profile-15.jpg" alt="avatar">
+                                                        <div class="media-body">
+                                                            <h6 class="">Abigail Johnson</h6>
+                                                            <p class="">Software Developer</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media d-block d-sm-flex text-sm-left text-center">
+                                                        <img class="" src="~/img/profile-4.jpg" alt="avatar">
+                                                        <div class="media-body">
+                                                            <h6 class="">Benjamin Blake</h6>
+                                                            <p class="">IT Manager</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media d-block d-sm-flex text-sm-left text-center">
+                                                        <img class="" src="~/img/profile-11.jpg" alt="avatar">
+                                                        <div class="media-body">
+                                                            <h6 class="">Evan Bower</h6>
+                                                            <p class="">Executive</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media d-block d-sm-flex text-sm-left text-center">
+                                                        <img class="" src="~/img/profile-2.jpg" alt="avatar">
+                                                        <div class="media-body">
+                                                            <h6 class="">Wanda Campbell</h6>
+                                                            <p class="">Hardware Engineer</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media d-block d-sm-flex text-sm-left text-center">
+                                                        <img class="" src="~/img/profile-6.jpg" alt="avatar">
+                                                        <div class="media-body">
+                                                            <h6 class="">David Bond</h6>
+                                                            <p class="">UI/UX Developer</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media d-block d-sm-flex text-sm-left text-center">
+                                                        <img class="" src="~/img/profile-7.jpg" alt="avatar">
+                                                        <div class="media-body">
+                                                            <h6 class="">Olivia Chapman</h6>
+                                                            <p class="">Accountant</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-center strong text-primary">Deleted User</p>
+                                                <div id='right-rm-spill' class='dragula'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Drag element using handle</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class='type-3'>
+                                        <div class='row'>
+                                            <div class="col-md-6">
+                                                <div id='left-lovehandles' class='dragula'>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-2.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Abigail Johnson</h6>
+                                                                    <p class="">Software Developer</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="handle"><i class="las la-arrows-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-3.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Benjamin Blake</h6>
+                                                                    <p class="">IT Manager</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="handle"><i class="las la-arrows-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-4.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Jasmine Juie</h6>
+                                                                    <p class="">Tech Support</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="handle"><i class="las la-arrows-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div id='right-lovehandles' class='dragula'>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-7.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">David Bond</h6>
+                                                                    <p class="">UI/UX Developer</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="handle"><i class="las la-arrows-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-8.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Wanda Campbell</h6>
+                                                                    <p class="">Hardware Engineer</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="handle"><i class="las la-arrows-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media  d-md-flex d-block text-sm-left text-center">
+                                                        <img alt="avatar" src="~/img/profile-9.jpg" class="img-fluid ">
+                                                        <div class="media-body">
+                                                            <div class="d-xl-flex d-block justify-content-between">
+                                                                <div class="">
+                                                                    <h6 class="">Vanessa Alsop</h6>
+                                                                    <p class="">Backend Developer</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="handle"><i class="las la-arrows-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ScriptsBlock {
+    <script src="~/lib/plugins/dragitems/dragula.min.js"></script>
+    <script src="~/lib/plugins/dragitems/custom-dragula.js"></script>
+}

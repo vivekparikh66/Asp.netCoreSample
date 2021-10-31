@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Countdown";
+    ViewData["PageName"] = "basicui_countdown";
+    ViewData["Heading"] = "<i class='subheader-icon las la-chart-area'></i> Basic UI <span class='fw-300'>Countdown</span>";
+    ViewData["Category1"] = "Basic UI";
+
+}
+
+@section HeadBlock {
+    <link href="~/css/basic-ui/custom_countdown.css" rel="stylesheet" type="text/css" />
+}
+@section SubheaderBlock {
+
+}
+
+<div class="layout-px-spacing">
+    <div class="layout-top-spacing mb-2">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="container p-0">
+                    <div class="row layout-top-spacing">
+                        <div class="col-lg-6 mb-4">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Circle Countdown</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div id="timer" class="circle-countdown">
+                                        <div class="days"><span class="count">00</span> <span class="text">Days</span></div>
+                                        <div class="hours"><span class="count">00</span> <span class="text">Hours</span></div>
+                                        <div class="min"><span class="count">00</span> <span class="text">Mins</span></div>
+                                        <div class="sec"><span class="count">00</span> <span class="text">Secs</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Square Countdown</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div id="timersquare" class="square-countdown">
+                                        <div class="days"><span class="count">00</span> <span class="text">Days</span></div>
+                                        <div class="hours"><span class="count">00</span> <span class="text">Hours</span></div>
+                                        <div class="min"><span class="count">00</span> <span class="text">Mins</span></div>
+                                        <div class="sec"><span class="count">00</span> <span class="text">Secs</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">No Background Color Countdown</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div id="nocolor" class="square-countdown no-color">
+                                        <div class="days"><span class="count">00</span> <span class="text">Days</span></div>
+                                        <div class="hours"><span class="count">00</span> <span class="text">Hours</span></div>
+                                        <div class="min"><span class="count">00</span> <span class="text">Mins</span></div>
+                                        <div class="sec"><span class="count">00</span> <span class="text">Secs</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section ScriptsBlock {
+    <script src="~/lib/plugins/countdown/jquery.countdown.min.js"></script>
+    <script src="~/js/basicui/custom-countdown.js"></script>
+}

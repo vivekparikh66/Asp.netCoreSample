@@ -1,0 +1,59 @@
+﻿@{
+    //var culture = @Session.Language.Code;
+    //var dir = @Session.Language.IsRTL ? "rtl" : "ltr";
+    var dir = "ltr";
+}
+
+<meta charset="utf-8">
+<title>
+    @if (ViewBag.Title?.Length > 0)
+    {
+        <text>@ViewData["Title"]</text>
+    }
+    else
+    {
+        <text>Whatso</text>
+    }
+</title>
+
+<meta name="description" content="@ViewBag.Title">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="msapplication-tap-highlight" content="no">
+<partial name="_Favicon" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+@if (@dir == "rtl")
+{
+    <link href="~/lib/bootstrap/css/bootstrap-rtl.min.css" rel="stylesheet" media="screen, print">
+}
+else
+{
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen, print">
+}
+
+<link href="~/css/main.css" rel="stylesheet" media="screen, print">
+<link href="~/css/structure.css" rel="stylesheet" media="screen, print">
+<link href="~/lib/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="screen, print">
+<link href="~/lib/plugins/highlight/styles/monokai-sublime.css" rel="stylesheet" media="screen, print">
+
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+<link href="~/css/custom.css" rel="stylesheet" media="screen, print">
+
+<link href="~/css/darkmode/global.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/dashboard.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/apps.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/basic_ui.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/forms.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/datatables.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/maps.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/pages.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/ui_elements.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/widgets.css" rel="stylesheet" type="text/css" />
+<link href="~/css/darkmode/charts.css" rel="stylesheet" type="text/css" />
+

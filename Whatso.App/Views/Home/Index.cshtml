@@ -1,0 +1,91 @@
+﻿@model CompanyDetailsModel
+@{
+    ViewData["Title"] = "Company";
+}
+@section HeadBlock {
+    <link rel="stylesheet" type="text/css" href="~/lib/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/plugins/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/plugins/select2/select2.min.css">
+    <link href="~/css/forms/form-widgets.css" rel="stylesheet" type="text/css">
+}
+@section SubheaderBlock {
+    <link href="~/css/forms/form-widgets.css" rel="stylesheet" type="text/css">
+}
+
+<div class="layout-px-spacing">
+    <div class="layout-top-spacing mb-2">
+        <div class="statbox widget box box-shadow mb-4">
+            <div class="widget-header">
+                <h4>Company Details</h4>
+            </div>
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "CompanyDetailsform" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="widget-content widget-content-area">
+                    <div class="w-100">
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>First Name:</label>
+                                @Html.TextBoxFor(x => x.CompanyDetail.FirstName, new { @class = "form-control" })
+                                @Html.HiddenFor(x => x.CompanyDetail.Id)
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Last Name:</label>
+                                @Html.TextBoxFor(x => x.CompanyDetail.LastName, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Company Name:</label>
+                                @Html.TextBoxFor(x => x.CompanyDetail.CompanyName, new { @class = "form-control" })
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Company Address:</label>
+                                @Html.TextAreaFor(x => x.CompanyDetail.CompanyAddress, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Company City:</label>
+                                @Html.DropDownListFor(x => x.CompanyDetail.CompanyCityId, new SelectList(Model.Cities, "Id", "CityName"), "---Select City---", new { @class = "form-control placeholder" })
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Company Country:</label>
+                                @Html.DropDownListFor(x => x.CompanyDetail.CompanyCountryId, new SelectList(Model.Countries, "Id", "CountryName"), "---Select Country---", new { @class = "form-control placeholder" })
+                                @*<select class="form-control placeholder">
+                                        <option></option>
+                                        <option>Orange</option>
+                                        <option>White</option>
+                                        <option>Purple</option>
+                                    </select>
+                                    <span class="form-text text-muted">Please enter your contact number</span>*@
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Gst No:</label>
+                                @Html.TextBoxFor(x => x.CompanyDetail.GSTNo, new { @class = "form-control" })
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Currency:</label>
+                                @Html.DropDownListFor(x => x.CompanyDetail.CompanyCurrencyId, new SelectList(Model.Currencies, "Id", "CurrencyName"), "---Select Currency---", new { @class = "form-control placeholder" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@section ScriptsBlock {
+    <script src="~/js/forms/forms-layouts.js"></script>
+    <script src="~/lib/plugins/select2/select2.min.js"></script>
+    <script src="~/js/forms/custom-select2.js"></script>
+}

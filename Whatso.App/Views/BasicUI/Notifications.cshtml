@@ -1,0 +1,252 @@
+﻿@{
+    ViewData["Title"] = "Notifications";
+    ViewData["PageName"] = "basicui_notifications";
+    ViewData["Heading"] = "<i class='subheader-icon las la-chart-area'></i> Basic UI <span class='fw-300'>Notifications</span>";
+    ViewData["Category1"] = "Basic UI";
+
+}
+@section HeadBlock {
+    <link href="~/lib/plugins/notification/snackbar/snackbar.min.css" rel="stylesheet" type="text/css" />
+}
+@section SubheaderBlock {
+
+}
+
+<div class="layout-px-spacing">
+    <div class="layout-top-spacing mb-2">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="container p-0">
+                    <div class="row layout-top-spacing" id="cancel-row">
+                        <div class="col-lg-12 col-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Bootstrap Toasts</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area pb-5">
+                                    <button id="toast-btn" class="btn btn-primary">Open Toast</button>
+                                    <div style="position: absolute; top: 0; right: 0;z-index: 9999; margin-left: 20px; margin-right: 20px;">
+                                        <div class="toast toast-primary fade hide" role="alert" data-delay="600000" aria-live="assertive" aria-atomic="true">
+                                            <div class="toast-header">
+                                                <strong class="mr-auto">Toast</strong>
+                                                <small class="meta-time">just now</small>
+                                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="toast-body">
+                                                This is a bootstrap toast message.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Simple Notification</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info default">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Top Left</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info top-left">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Top Center</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info top-center">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Top Right</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info top-right">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Bottom Left</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info bottom-left">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Bottom Center</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info bottom-center">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Bottom right</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info bottom-right">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">No Action</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info no-action">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Action Text</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info action-text">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Action Text Color</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info text-color">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Click Callback</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info click-callback">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Duration</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn btn-info duration">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4 class="text-center">Background Color</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area text-center">
+                                    <button class="btn mb-2 btn-primary notification-bg-primary">Primary</button>
+                                    <button class="btn mb-2 btn-info notification-bg-info">Info</button>
+                                    <button class="btn mb-2 btn-success notification-bg-success">Success</button>
+                                    <button class="btn mb-2 btn-warning notification-bg-warning">Warning</button>
+                                    <button class="btn mb-2 btn-danger notification-bg-danger">Danger</button>
+                                    <button class="btn mb-2 btn-dark notification-bg-dark">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ScriptsBlock {
+    <script src="~/lib/plugins/notification/snackbar/snackbar.min.js"></script>
+    <script src="~/js/basicui/notifications.js"></script>
+    <script>
+        var toastButton = document.getElementById("toast-btn");
+        toastButton.onclick = function () {
+            $('.toast').toast('show');
+        }
+    </script>
+}

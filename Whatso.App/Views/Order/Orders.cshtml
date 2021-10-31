@@ -1,0 +1,157 @@
+﻿@model Whatso.Model.MyorderDetailsModel
+@{
+    ViewData["Title"] = "My Orders-Manage";
+}
+@section HeadBlock {
+    <link rel="stylesheet" type="text/css" href="~/lib/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/plugins/table/datatable/dt-global_style.css">
+}
+@section SubheaderBlock {
+
+}
+
+<!-- BASIC -->
+<div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+    <div class="widget-content widget-content-area br-6">
+        <h4 class="table-header">
+            Recent Orders
+        </h4>
+        <div class="table-responsive mb-4">
+            <table id="export-dt" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Purchase Date</th>
+                        <th>Amount</th>
+                        <th>Plan Name</th>
+                        <th>Software Link</th>
+                        <th>Receipt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.ListOfOrder != null)
+                    {
+                        foreach (var item in Model.ListOfOrder)
+                        {
+                            <tr>
+                                <td>@item.PurchasedDate</td>
+                                <td>@item.Amount</td>
+                                <td>@item.PackagePurchased</td>
+                                @if (item.productid == 1 || item.productid == 2026)
+                                {
+                                    if (!string.IsNullOrEmpty(item.SoftwareLink))
+                                    {
+                                        <td>
+                                            <a href="@item.SoftwareLink" class="btn btn-info btn-rounded">
+                                                Download<i class="las la-download" style="font-size: 20px;margin-left:5px"></i>
+                                            </a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>Pending Whitelabel Creation</td>
+                                    }
+                                }
+                                else
+                                {
+                                    <td></td>
+                                }
+                                <td>
+                                    <a href="@item.Receipt" class="btn btn-group  btn-rounded">
+                                        Print<i class="las la-print" style="font-size: 20px;margin-left:5px"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@if (Model.IsNoteVisible)
+{
+
+    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+        <div class="widget-content widget-content-area br-6">
+            <h3>Note</h3>
+            <br />
+            <div>@Html.Raw(Model.Note)</div>
+            <br />
+            <div>@Html.Raw(Model.WhitelabelNote)</div>
+            <a href="/Order/GenerateLicense" class="btn btn-info">Generate License</a>
+        </div>
+    </div>
+}
+@if (Model.isWhitelabeVisible)
+{
+    <div class="widget-content widget-content-area br-6 mt-4">
+        <h4 class="table-header">
+            White Label
+        </h4>
+        <hr>
+        <div class="widget-content widget-content-area">
+            <form method="post" action="Order/CreateWhiteLabel" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="col  mt-2">
+                        <span>
+                            Company Name
+                            <span class="text-danger">*</span>
+                        </span>
+                        <input type="text" id="CompanyName" class="form-control" name="CompanyName" value="@Model.CompanyName" required="required" />
+                    </div>
+                    <div class="col mt-2">
+                        <span>
+                            WebSite URL
+                        </span>
+                        <input type="text" id="WebsiteURL" class="form-control" name="WebsiteURL" value="@Model.WebsiteURL" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-3">
+                        <span>
+                            Comopany LOGO (183 X 400)
+                            <span class="text-danger">*</span>
+                        </span>
+                        <input type="file" id="CompanyLOGO" class="form-control pull-right" name="CompanyLOGOFile" value="CompanyLOGOFile" required="required" accept="image/jpg, image/jpeg,image/JPG, image/JPEG" onchange="checkimage(this)" />
+                    </div>
+                    <div class="col mt-3">
+                        <span>
+                            Company ICON (35 X 35)
+                            <span class="text-danger">*</span>
+                        </span>
+                        <input type="file" id="CompanyICON" class="form-control" name="CompanyICONFile" value="CompanyICONFile" required="required" accept=".ico,.ICO" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mt-3">
+                        <span>
+                            EXE Name
+                            <span class="text-danger">*</span>
+                        </span>
+                        <input type="text" id="EXEName" class="form-control" name="EXEName" value="@Model.EXEName" required="required" />
+                    </div>
+                    <div class="col mt-3">
+                        <br />
+                        <button type="submit" id="btnwhitelabel" class="btn btn-primary">Create WhiteLabel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+}
+
+
+@section ScriptsBlock {
+    <script src="~/lib/plugins/table/datatable/datatables.js"></script>
+    <!--  The following JS library files are loaded to use Copy CSV Excel Print Options-->
+    <script src="~/lib/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
+    <script src="~/lib/plugins/table/datatable/button-ext/jszip.min.js"></script>
+    <script src="~/lib/plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
+    <script src="~/lib/plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <!-- The following JS library files are loaded to use PDF Options-->
+    <script src="~/lib/plugins/table/datatable/button-ext/pdfmake.min.js"></script>
+    <script src="~/lib/plugins/table/datatable/button-ext/vfs_fonts.js"></script>
+    <script type="text/javascript" src="~/js/MyOrders.js"></script>
+}

@@ -1,0 +1,197 @@
+/* app content heading */
+.subheader:not(:empty) {
+    margin-top: calc(0.5rem + 0.625rem);
+    margin-bottom: calc(1.5rem + 0.625rem);
+    padding: 0 20px 0 18px !important;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.subheader-icon {
+    color: #2262c6;
+    margin-right: 0.25rem;
+}
+
+.subheader-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #3b3f5c;
+    text-shadow: #fff 0 1px;
+    margin: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.subheader-title sup.badge {
+    text-shadow: none;
+    position: absolute;
+    margin-top: 0.4rem;
+    margin-left: 0.25rem;
+    font-size: 40%;
+    padding: 2px 5px;
+    line-height: normal;
+}
+
+    .subheader-title small {
+        font-weight: 400;
+        color: #838383;
+        margin-bottom: 0;
+        font-size: 0.875rem;
+    }
+
+/* font weights */
+.fw-300 {
+    font-weight: 300 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.fw-n {
+    font-weight: normal !important;
+}
+
+/* font sizes */
+.fs-nano {
+    font-size: 0.6875rem !important;
+}
+
+/* 10px */
+.fs-xs {
+    font-size: 0.75rem !important;
+}
+
+/* 12px */
+.fs-sm {
+    font-size: 0.78125rem !important;
+}
+
+/* 12.5px */
+.fs-b {
+    font-size: 0.8125rem !important;
+}
+
+/* 13px */
+.fs-md {
+    font-size: 0.875rem !important;
+}
+
+/* 14px */
+.fs-lg {
+    font-size: 0.9375rem !important;
+}
+
+/* 15px */
+.fs-xl {
+    font-size: 1rem !important;
+}
+
+/* 16px */
+.fs-xxl {
+    font-size: 1.75rem !important;
+}
+
+/* page header */
+/* alphas */
+.opacity-5 {
+    opacity: 0.05;
+}
+
+.opacity-10 {
+    opacity: 0.1;
+}
+
+.opacity-15 {
+    opacity: 0.15;
+}
+
+.opacity-20 {
+    opacity: 0.2;
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.opacity-30 {
+    opacity: 0.3;
+}
+
+.opacity-35 {
+    opacity: 0.35;
+}
+
+.opacity-40 {
+    opacity: 0.4;
+}
+
+.opacity-45 {
+    opacity: 0.45;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-55 {
+    opacity: 0.55;
+}
+
+.opacity-60 {
+    opacity: 0.6;
+}
+
+.opacity-65 {
+    opacity: 0.65;
+}
+
+.opacity-70 {
+    opacity: 0.7;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.opacity-80 {
+    opacity: 0.8;
+}
+
+.opacity-85 {
+    opacity: 0.85;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.opacity-95 {
+    opacity: 0.95;
+}
+
+.opacity-100 {
+    opacity: 1;
+}

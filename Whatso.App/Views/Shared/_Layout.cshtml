@@ -1,0 +1,49 @@
+﻿
+@{
+    //var dir = @Session.Language.IsRTL ? "rtl" : "ltr";
+    var dir = "ltr";
+    var theme = "light";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/lib/plugins/table/datatable/datatables.css">
+    <link href="~/css/forms/form-widgets.css" rel="stylesheet" type="text/css">
+    <link href="~/lib/plugins/select2/select2.min.css" rel="stylesheet" />
+    <link href="~/lib/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/css/loader.css" rel="stylesheet" media="screen, print">*@
+    <script src="~/lib/plugins/sweetalerts/sweetalert2.min.js"></script>
+    <partial name="_Head" />
+    @if (@dir == "rtl")
+    {
+        <link href="~/css/rtl/global.css" rel="stylesheet" />
+    }
+    <base href="~/" />
+    @RenderSection("HeadBlock", required: false)
+</head>
+<body class="@theme">
+    <partial name="_Loader" />
+    <partial name="_NavBar" />
+    <div id="container" class="main-container">
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+        <div class="rightbar-overlay"></div>
+        <partial name="_LeftPanel" />
+        <div id="content" class="main-content">
+            <partial name="_PageBreadcrumb" />
+            <div class="subheader"><partial name="_PageHeading" />@RenderSection("Subheaderblock", required: false)</div>
+            @RenderBody()
+
+            <partial name="_MessageReload" />
+            <partial name="_PageFooter" />
+            <div class="scroll-top-arrow" style="display: none;">
+                <i class="las la-angle-up"></i>
+            </div>
+
+        </div>
+    </div>
+    <partial name="_ScriptsBasePlugins" />
+    @RenderSection("ScriptsBlock", required: false)
+</body>
+</html>

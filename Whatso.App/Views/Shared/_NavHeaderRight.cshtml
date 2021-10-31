@@ -1,0 +1,17 @@
+@{
+    var theme = "light";
+}
+
+<ul class="navbar-item flex-row ml-md-auto">
+    <li class="nav-item dropdown fullscreen-dropdown d-none d-lg-flex">
+        <a class="nav-link full-screen-mode" href="javascript:void(0);">
+            <i class="las la-compress" id="fullScreenIcon"></i>
+        </a>
+    </li>
+    <li class="nav-item dropdown user-profile-dropdown">
+        <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <img src="~/img/profile-1.jpg" alt="John Doe">
+        </a>
+        <partial name="_DropdownMenu" />
+    </li>
+</ul>
